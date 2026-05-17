@@ -8,6 +8,8 @@ HanoiTower::HanoiTower(const int& disks) {
 
     isSolved = false;
 
+    pole.resize(NUM_OF_POLES);
+
     for (int i=disks; i>=1; i--) {
         pole[0].push_back(i);
         winCond.push_back(i);
@@ -26,7 +28,7 @@ bool HanoiTower::moveDisk
 
         if (pole[a].back() < pole[b].back()) {
             int moved = pole[a].back();
-            pole[a].erase(pole[a].end());
+            pole[a].pop_back();
             pole[b].push_back(moved); 
         
             checkSolved();
@@ -63,14 +65,15 @@ const void HanoiTower::printTower() {
 
     char label = '\0';
 
+    std::cout << "\n";
     for (int i=0; i<NUM_OF_POLES; i++) {
 
         label = i + 65;
-        std::cout << "\n" << label << ": [";
+        std::cout << label << ": [";
 
         for (auto x : pole[i])
             std::cout << x << ", ";
 
-        std::cout << "]";
+        std::cout << "]; ";
     }
 }

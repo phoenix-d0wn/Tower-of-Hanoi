@@ -7,23 +7,31 @@
 
 int main() {
 
-    // TEST
-    HanoiTower tower(3);
+    HanoiGame game;
 
-    tower.printTower();
-    std::cout << "\n\nIs Solved?: " << tower.isSolved << "\n";
+    HanoiTower result = game.search(3);
 
-    tower.moveDisk(0, 2);
-    tower.moveDisk(0, 1);
-    tower.moveDisk(2, 1);
-    tower.moveDisk(0, 2);
-    tower.moveDisk(1, 0);
-    tower.moveDisk(1, 2);
-    tower.moveDisk(0, 2);
+    // std::cout << "\nFinal result:";
+    // result.printTower();
 
 
-    tower.printTower();
-    std::cout << "\n\nIs Solved?: " << tower.isSolved << "\n";
+    // // TEST
+    // HanoiTower tower(3);
+
+    // tower.printTower();
+    // std::cout << "\n\nIs Solved?: " << tower.isSolved << "\n";
+
+    // tower.moveDisk(0, 2);
+    // tower.moveDisk(0, 1);
+    // tower.moveDisk(2, 1);
+    // tower.moveDisk(0, 2);
+    // tower.moveDisk(1, 0);
+    // tower.moveDisk(1, 2);
+    // tower.moveDisk(0, 2);
+
+
+    // tower.printTower();
+    // std::cout << "\n\nIs Solved?: " << tower.isSolved << "\n";
 
     return 0;
 }

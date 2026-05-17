@@ -16,7 +16,7 @@ private:
 public:
     /* POLE FORMAT
         [ 0 : [], 1 : [], 2 : [] ] */
-    std::vector<int> pole[NUM_OF_POLES];
+    std::vector<std::vector<int>> pole;
 
     // Win condition is pole[2] = [n, n-1, n-2, ..., 1]; 
     //  n: # of disks

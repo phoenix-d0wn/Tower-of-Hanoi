@@ -5,13 +5,13 @@
 
 # include "HanoiTower.h"
 
-# include <queue>
+# include <vector>
 
 class HanoiGame {
 
 public:
-    std::queue<HanoiTower> frontier;
-    std::queue<HanoiTower> closed;
+    std::vector<HanoiTower> frontier;
+    std::vector<HanoiTower> closed;
 
     HanoiGame() {}
     ~HanoiGame() {}
